@@ -1,0 +1,25 @@
+{
+    "name": "gkiokan/l6-core",
+    "description": "",
+    "authors": [
+        {
+            "name": "Gkiokan Sali",
+            "email": "me@gkiokan.net"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Gkiokan\\Core\\Providers\\CoreServiceProvider"
+            ],
+            "aliases": {
+
+            }
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Gkiokan\\Core\\": ""
+        }
+    }
+}
