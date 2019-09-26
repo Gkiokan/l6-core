@@ -30,7 +30,6 @@ $polyfills = [
 </head>
 <body class='white-content'>
 
-  <h1>{{ $_GET['title'] ?? 'Hi there.' }}</h1>
   <div id="app"></div>
 
   {{-- Global configuration object --}}
@@ -43,9 +42,9 @@ $polyfills = [
   @if (app()->isLocal())
     <script src="{{ mix('modules/core/app.js') }}"></script>
   @else
-    <script src="{{ mix('js/manifest.js') }}"></script>
-    <script src="{{ mix('js/vendor.js') }}"></script>
-    <script src="{{ mix('js/app.js') }}"></script>
+    <script src="{{ mix('modules/core/manifest.js') }}"></script>
+    <script src="{{ mix('modules/core/vendor.js') }}"></script>
+    <script src="{{ mix('modules/core/app.js') }}"></script>
   @endif
 </body>
 </html>

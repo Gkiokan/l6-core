@@ -11,6 +11,6 @@ class CoreController extends Controller
 
       public function index()
       {
-          return view('core::layouts.vue');
+          return view('core::layouts.vue')->with('src', 'core');
       }
 }

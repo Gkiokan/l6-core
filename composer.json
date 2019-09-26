@@ -1,6 +1,6 @@
 {
-    "name": "gkiokan/l6-core",
-    "description": "",
+    "name": "gkiokan/l6-module-core",
+    "description": "Laravel 6 Core Module for modular package usage.",
     "authors": [
         {
             "name": "Gkiokan Sali",
