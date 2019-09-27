@@ -1,10 +1,11 @@
 const mix = require('laravel-mix');
 require('laravel-mix-merge-manifest');
 
-mix.setPublicPath('../../public').mergeManifest();
+mix.setPublicPath('../../public/modules/core/').mergeManifest();
+mix.setResourceRoot('/modules/core')
 
-mix.js(__dirname + '/Resources/assets/js/app.js', 'modules/core/app.js')
-    .sass( __dirname + '/Resources/assets/sass/app.scss', 'modules/core/app.css');
+mix.js(__dirname + '/Resources/assets/js/app.js', 'app.js')
+    .sass( __dirname + '/Resources/assets/sass/app.scss', 'app.css');
 
 if (mix.inProduction()) {
     mix.version();
@@ -17,7 +18,6 @@ mix.webpackConfig({
     //     cleanStaleWebpackAssets: false,
     //     cleanOnceBeforeBuildPatterns: ['pulblic/css/*', 'public/js/*'],
     // }),
-    // new VuetifyLoaderPlugin(),
   ],
   resolve: {
     extensions: ['.js', '.json', '.vue'],
@@ -27,7 +27,7 @@ mix.webpackConfig({
     }
   },
   output: {
-    chunkFilename: 'modules/core/js/[name].[chunkhash].js',
-    publicPath:  mix.config.hmr ? '//localhost:8080' : '/'
+    chunkFilename: 'js/[name].[chunkhash].js',
+    publicPath:  mix.config.hmr ? '//localhost:8080' : '/modules/core/'
   }
 })
