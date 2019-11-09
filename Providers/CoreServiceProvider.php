@@ -4,6 +4,7 @@ namespace Gkiokan\Core\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Factory;
+use Schema;
 
 class CoreServiceProvider extends ServiceProvider
 {
@@ -14,11 +15,13 @@ class CoreServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->registerTranslations();
-        $this->registerConfig();
-        $this->registerViews();
-        $this->registerFactories();
-        $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
+        // $this->registerTranslations();
+        // $this->registerConfig();
+        // $this->registerViews();
+        // $this->registerFactories();
+        // $this->loadMigrationsFrom(__DIR__ . '/../Database/Migrations');
+
+        // Schema::defaultStringLength(191);
     }
 
     /**
@@ -28,7 +31,7 @@ class CoreServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->register(RouteServiceProvider::class);
+        // $this->app->register(RouteServiceProvider::class);
     }
 
     /**

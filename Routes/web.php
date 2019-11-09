@@ -12,5 +12,7 @@
 */
 
 Route::prefix('core')->group(function() {
-    Route::get('/{path?}', 'CoreController@index')->where('path', '(.*)');
+    Route::get('/{path?}', 'CoreController@index')
+           ->where('path', '(.*)')
+           ->name('core.index');
 });
